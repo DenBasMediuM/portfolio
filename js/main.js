@@ -8064,7 +8064,16 @@ $(function() {
         dots: true,
         speed: 500,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+    
+        responsive: [
+            {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
     })
     
     $("#portfolio-arrow-prev").on("click", function(event){
