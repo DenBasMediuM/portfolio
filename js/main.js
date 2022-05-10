@@ -8103,4 +8103,20 @@ $(function() {
     		$menu_popup.slideUp(300);
     	}
     });
+    // Add active class to the current button (highlight it)
+    var location = window.location.href;
+        var cur_url = location.split('/').pop();
+        
+        $('.nav a').each(function () {
+            
+            var link = $(this).attr('href');
+            console.log(cur_url);
+            console.log(link);
+            if (cur_url == link) {
+                $(this).addClass('active');
+            }
+            else{
+                $(this).removeClass('active');
+            }
+        });
 })
